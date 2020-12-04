@@ -29,17 +29,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Flex flexDir="column" maxW="1200px" w="80%" mx="auto" mt="80">
-        <Heading as="h1" textAlign="center" mx="auto">
+      <Flex flexDir="column" maxW="1200px" w="80%" mx="auto" mt="40">
+        <Heading as="h1" textAlign="center" mx="auto" color="green.500">
           Soccer Result Image Generator
         </Heading>
 
-        <Flex>
+        <Flex
+          mt="10"
+          flexDir={{ sm: 'column', lg: 'row' }}
+          justifyContent="space-between"
+        >
           <InputGroup flexDir="column">
             <Input
               value={team1}
               onChange={e => setTeam1(e.target.value)}
               placeholder="Team 1"
+              focusBorderColor="green.300"
               size="lg"
             />
           </InputGroup>
@@ -54,8 +59,12 @@ export default function Home() {
           </InputGroup>
         </Flex>
 
-        <Flex>
-          <Flex flexDir="column" mr="12">
+        <Flex
+          flexDir={{ sm: 'column', lg: 'row' }}
+          justifyContent="space-around"
+          mt="10"
+        >
+          <Flex flexDir="column">
             <Text maxW="320px">{team1}</Text>
             <NumberInput
               min={0}
