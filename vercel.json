@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/game-result.png", "destination": "/api/game-result" }
+  ]
+}
