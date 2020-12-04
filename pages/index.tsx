@@ -15,15 +15,15 @@ import {
 } from '@chakra-ui/react'
 
 export default function Home() {
-  const [team1, setTeam1] = useState('fef')
-  const [team2, setTeam2] = useState('fefe')
+  const [team1, setTeam1] = useState('')
+  const [team2, setTeam2] = useState('')
   const [team1goals, setTeam1goals] = useState(0)
   const [team2goals, setTeam2goals] = useState(0)
 
   const href = `http://localhost:3000/api/game-result.png?teams=${team1}x${team2}&result=${team1goals}x${team2goals}`
 
   return (
-    <div>
+    <>
       <Head>
         <title>Soccer Result Image Maker</title>
         <link rel="icon" href="/favicon.ico" />
@@ -88,6 +88,6 @@ export default function Home() {
 
         {team1 && team2 && <Link href={href}>Get Image URL</Link>}
       </Flex>
-    </div>
+    </>
   )
 }
