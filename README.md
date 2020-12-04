@@ -1,3 +1,7 @@
+<p align="center">
+   <img src=".github/logo.png" width="120"/>
+</p>
+
 <h1 align="center">Soccer Result Generator</h1>
 
 <p align="center">	
