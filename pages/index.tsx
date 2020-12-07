@@ -20,7 +20,7 @@ export default function Home() {
   const [team1goals, setTeam1goals] = useState(0)
   const [team2goals, setTeam2goals] = useState(0)
 
-  const href = `http://localhost:3000/api/game-result.png?teams=${team1}x${team2}&result=${team1goals}x${team2goals}`
+  const href = `http://localhost:3000/api/game-result.png?teams=${team1}-${team2}&result=${team1goals}-${team2goals}`
 
   return (
     <>
@@ -38,64 +38,76 @@ export default function Home() {
           mt="10"
           flexDir={{ sm: 'column', lg: 'row' }}
           justifyContent="space-between"
+          alignItems="center"
         >
-          <InputGroup flexDir="column">
+          <InputGroup flexDir="column" w={{ sm: '100%', lg: '48%' }}>
             <Input
               value={team1}
               onChange={e => setTeam1(e.target.value)}
               placeholder="Team 1"
-              focusBorderColor="green.300"
+              focusBorderColor="green.200"
               size="lg"
+              mb={{ sm: '8', lg: '0' }}
             />
+            <Flex flexDir="column" mt="6">
+              <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
+                {team1} Goals
+              </Text>
+              <NumberInput
+                min={0}
+                value={team1goals}
+                onChange={value => setTeam1goals(parseInt(value))}
+                allowMouseWheel
+              >
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+            </Flex>
           </InputGroup>
 
-          <InputGroup flexDir="column">
+          <InputGroup flexDir="column" w={{ sm: '100%', lg: '48%' }}>
             <Input
               value={team2}
               onChange={e => setTeam2(e.target.value)}
-              placeholder="Team 1"
+              placeholder="Team 2"
+              focusBorderColor="green.200"
               size="lg"
+              mb={{ sm: '8', lg: '0' }}
             />
+            <Flex flexDir="column" mt="6">
+              <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
+                {team2} Goals
+              </Text>
+              <NumberInput
+                min={0}
+                value={team2goals}
+                onChange={value => setTeam2goals(parseInt(value))}
+                allowMouseWheel
+              >
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+            </Flex>
           </InputGroup>
         </Flex>
 
-        <Flex
-          flexDir={{ sm: 'column', lg: 'row' }}
-          justifyContent="space-around"
-          mt="10"
-        >
-          <Flex flexDir="column">
-            <Text maxW="320px">{team1}</Text>
-            <NumberInput
-              min={0}
-              value={team1goals}
-              onChange={value => setTeam1goals(parseInt(value))}
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          </Flex>
-
-          <Flex flexDir="column">
-            <Text maxW="320px">{team2}</Text>
-            <NumberInput
-              min={0}
-              value={team2goals}
-              onChange={value => setTeam2goals(parseInt(value))}
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          </Flex>
-        </Flex>
-
-        {team1 && team2 && <Link href={href}>Get Image URL</Link>}
+        {team1 && team2 && (
+          <Link
+            href={href}
+            mt="16"
+            color="green.600"
+            alignSelf="center"
+            textAlign="center"
+          >
+            Get Image URL
+          </Link>
+        )}
       </Flex>
     </>
   )
