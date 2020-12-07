@@ -44,7 +44,7 @@ export default function Home() {
               value={team1}
               onChange={e => setTeam1(e.target.value)}
               placeholder="Team 1"
-              focusBorderColor="green.300"
+              focusBorderColor="green.200"
               size="lg"
             />
           </InputGroup>
@@ -53,7 +53,8 @@ export default function Home() {
             <Input
               value={team2}
               onChange={e => setTeam2(e.target.value)}
-              placeholder="Team 1"
+              placeholder="Team 2"
+              focusBorderColor="green.200"
               size="lg"
             />
           </InputGroup>
