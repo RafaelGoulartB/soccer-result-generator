@@ -57,6 +57,7 @@ export default function Home() {
                 min={0}
                 value={team1goals}
                 onChange={value => setTeam1goals(parseInt(value))}
+                allowMouseWheel
               >
                 <NumberInputField />
                 <NumberInputStepper>
@@ -84,6 +85,7 @@ export default function Home() {
                 min={0}
                 value={team2goals}
                 onChange={value => setTeam2goals(parseInt(value))}
+                allowMouseWheel
               >
                 <NumberInputField />
                 <NumberInputStepper>
