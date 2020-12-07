@@ -50,7 +50,7 @@ export default function Home() {
               mb={{ sm: '8', lg: '0' }}
             />
             <Flex flexDir="column" mt="4">
-              <Text maxW="320px">{team1}</Text>
+              <Text maxW="320px">{team1} Goals</Text>
               <NumberInput
                 min={0}
                 value={team1goals}
@@ -75,7 +75,7 @@ export default function Home() {
               mb={{ sm: '8', lg: '0' }}
             />
             <Flex flexDir="column" mt="4">
-              <Text maxW="320px">{team2}</Text>
+              <Text maxW="320px">{team2} Goals</Text>
               <NumberInput
                 min={0}
                 value={team2goals}
