@@ -38,26 +38,26 @@ export default function Home() {
           mt="10"
           flexDir={{ sm: 'column', lg: 'row' }}
           justifyContent="space-between"
+          alignItems="center"
         >
-          <InputGroup flexDir="column">
-            <Input
-              value={team1}
-              onChange={e => setTeam1(e.target.value)}
-              placeholder="Team 1"
-              focusBorderColor="green.200"
-              size="lg"
-            />
-          </InputGroup>
+          <Input
+            value={team1}
+            onChange={e => setTeam1(e.target.value)}
+            placeholder="Team 1"
+            w={{ sm: '100%', lg: '48%' }}
+            focusBorderColor="green.200"
+            size="lg"
+            mb={{ sm: '8', lg: '0' }}
+          />
 
-          <InputGroup flexDir="column">
-            <Input
-              value={team2}
-              onChange={e => setTeam2(e.target.value)}
-              placeholder="Team 2"
-              focusBorderColor="green.200"
-              size="lg"
-            />
-          </InputGroup>
+          <Input
+            value={team2}
+            onChange={e => setTeam2(e.target.value)}
+            placeholder="Team 2"
+            w={{ sm: '100%', lg: '48%' }}
+            focusBorderColor="green.200"
+            size="lg"
+          />
         </Flex>
 
         <Flex
