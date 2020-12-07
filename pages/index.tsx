@@ -11,7 +11,8 @@ import {
   NumberInputStepper,
   NumberIncrementStepper,
   NumberInput,
-  NumberDecrementStepper
+  NumberDecrementStepper,
+  Divider
 } from '@chakra-ui/react'
 
 export default function Home() {
@@ -47,9 +48,8 @@ export default function Home() {
               placeholder="Team 1"
               focusBorderColor="green.200"
               size="lg"
-              mb={{ sm: '8', lg: '0' }}
             />
-            <Flex flexDir="column" mt="6">
+            <Flex flexDir="column" mt={{ sm: '3', lg: '6' }}>
               <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
                 {team1} Goals
               </Text>
@@ -68,6 +68,8 @@ export default function Home() {
             </Flex>
           </InputGroup>
 
+          <Divider display={{ sm: 'block', lg: 'none' }} my="12" />
+
           <InputGroup flexDir="column" w={{ sm: '100%', lg: '48%' }}>
             <Input
               value={team2}
@@ -75,9 +77,8 @@ export default function Home() {
               placeholder="Team 2"
               focusBorderColor="green.200"
               size="lg"
-              mb={{ sm: '8', lg: '0' }}
             />
-            <Flex flexDir="column" mt="6">
+            <Flex flexDir="column" mt={{ sm: '3', lg: '6' }}>
               <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
                 {team2} Goals
               </Text>
