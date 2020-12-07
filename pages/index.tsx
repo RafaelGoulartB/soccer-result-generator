@@ -49,8 +49,10 @@ export default function Home() {
               size="lg"
               mb={{ sm: '8', lg: '0' }}
             />
-            <Flex flexDir="column" mt="4">
-              <Text maxW="320px">{team1} Goals</Text>
+            <Flex flexDir="column" mt="6">
+              <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
+                {team1} Goals
+              </Text>
               <NumberInput
                 min={0}
                 value={team1goals}
@@ -74,8 +76,10 @@ export default function Home() {
               size="lg"
               mb={{ sm: '8', lg: '0' }}
             />
-            <Flex flexDir="column" mt="4">
-              <Text maxW="320px">{team2} Goals</Text>
+            <Flex flexDir="column" mt="6">
+              <Text maxW="320px" mb="2" color="blue.400" fontWeight="bold">
+                {team2} Goals
+              </Text>
               <NumberInput
                 min={0}
                 value={team2goals}
@@ -95,7 +99,7 @@ export default function Home() {
           <Link
             href={href}
             mt="16"
-            color="green.500"
+            color="green.600"
             alignSelf="center"
             textAlign="center"
           >
